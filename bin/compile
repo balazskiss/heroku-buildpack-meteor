@@ -31,6 +31,7 @@ $bp_dir/bin/compile_meteor "$1" "$2"
 APP_CHECKOUT_DIR=$1
 COMPILE_DIR_SUFFIX=".meteor/heroku_build"
 COMPILE_DIR="$APP_CHECKOUT_DIR"/"$COMPILE_DIR_SUFFIX"
+mkdir -p "$COMPILE_DIR"
 echo "-----> Running extras"
 for file in `ls "$bp_dir"/extra | sort`; do
     . "$bp_dir"/extra/$file 
