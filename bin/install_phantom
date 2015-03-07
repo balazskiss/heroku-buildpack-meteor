@@ -7,18 +7,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
-echo $BUILD_DIR
-echo $CACHE_DIR
-echo $ENV_DIR
-
 cd $BUILD_DIR
 
-pwd
-
-curl -O -L 'http://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2'
-tar -xvjf phantomjs-1.9.7-linux-x86_64.tar.bz2
-rm phantomjs-1.9.7-linux-x86_64.tar.bz2
-
 mkdir bin
-cp phantomjs-1.9.7-linux-x86_64/bin/phantomjs bin/
-rm -rf phantomjs-1.9.7-linux-x86_64
+cd bin
