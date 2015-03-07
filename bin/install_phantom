@@ -17,6 +17,7 @@ pwd
 
 curl -O -L 'http://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2'
 tar -xvjf phantomjs-1.9.7-linux-x86_64.tar.bz2
+rm phantomjs-1.9.7-linux-x86_64.tar.bz2
 
-mkdir /app/bin
-cp phantomjs-1.9.7-linux-x86_64/bin/phantomjs /app/bin/
+# add phatnom binaries to the path
+PATH=$PATH:$BUILD_DIR/phantomjs-1.9.7-linux-x86_64/bin
