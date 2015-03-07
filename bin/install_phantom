@@ -20,4 +20,4 @@ tar -xvjf phantomjs-1.9.7-linux-x86_64.tar.bz2
 rm phantomjs-1.9.7-linux-x86_64.tar.bz2
 
 # add phatnom binaries to the path
-PATH=$PATH:$BUILD_DIR/phantomjs-1.9.7-linux-x86_64/bin
+export PATH=$PATH:$HOME/phantomjs-1.9.7-linux-x86_64/bin
