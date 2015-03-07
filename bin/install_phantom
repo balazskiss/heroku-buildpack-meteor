@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# USAGE: bin/compile <build-dir> <cache-dir> <env-dir>
 
 echo "Installing PhantomJS"
 

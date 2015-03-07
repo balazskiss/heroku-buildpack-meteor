@@ -20,6 +20,7 @@ source $bp_dir/bin/common.sh
 
 # Install node first, as a dependency, then install meteor & build app
 echo "phantom"
+chmod +x $bp_dir/bin/install_phantom
 $bp_dir/bin/install_phantom "$1" "$2"
 
 $bp_dir/bin/compile_node "$1" "$2"
