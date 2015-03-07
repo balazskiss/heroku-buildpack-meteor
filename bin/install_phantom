@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+echo "Installing PhantomJS"
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
+echo $BUILD_DIR
+echo $CACHE_DIR
+echo $ENV_DIR
+
+pwd
+
+curl -O -L 'http://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2'
+tar -xvjf phantomjs-1.9.7-linux-x86_64.tar.bz2
+
+mkdir /app/bin
+cp phantomjs-1.9.7-linux-x86_64/bin/phantomjs /app/bin/

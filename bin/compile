@@ -19,20 +19,6 @@ source $bp_dir/bin/common.sh
 
 
 # Install node first, as a dependency, then install meteor & build app
+$bp_dir/bin/install_phantom "$1" "$2"
 $bp_dir/bin/compile_node "$1" "$2"
 $bp_dir/bin/compile_meteor "$1" "$2"
-
-#
-# Extras
-#
-
-# source scripts in 'extra' dir, if any.  Create them for custom stuff like
-# binary dependencies, phantomjs for spiderable, etc.
-APP_CHECKOUT_DIR=$1
-COMPILE_DIR_SUFFIX=".meteor/heroku_build"
-COMPILE_DIR="$APP_CHECKOUT_DIR"/"$COMPILE_DIR_SUFFIX"
-mkdir -p "$COMPILE_DIR"
-echo "-----> Running extras"
-for file in `ls "$bp_dir"/extra | sort`; do
-    . "$bp_dir"/extra/$file 
-done
