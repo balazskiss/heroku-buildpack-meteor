@@ -11,3 +11,7 @@ cd $BUILD_DIR
 
 mkdir bin
 cd bin
+
+wget https://github.com/eugene1g/phantomjs/releases/download/2.0.0-bin/phantomjs-2.0.0-ubuntu_x86_64.zip
+unzip phantomjs-2.0.0-ubuntu_x86_64.zip 
+rm phantomjs-2.0.0-ubuntu_x86_64.zip
